@@ -5,6 +5,18 @@ using namespace std;
 const int SIZE = 19;
 
 
+int getSum(int matrix[][SIZE], int size) {
+	int sum = 0;
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (((i + j) >= (size - 1))&&(matrix[i][j] < 0)) {
+				sum += matrix[i][j];
+			}
+		}
+	}
+	return sum;
+}
+
 int main(int argc, char** argv) {
 	srand(time(NULL));
 	int matrix[SIZE][SIZE];
