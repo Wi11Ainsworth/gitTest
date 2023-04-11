@@ -5,6 +5,13 @@ using namespace std;
 const int SIZE = 19;
 
 
+void changeArray(int (&matrix)[SIZE][SIZE], int size, int rowToPaste, int rowToCopy) {
+	rowToPaste--;
+	rowToCopy--;
+	for (int i = 0; i < size; i++) {
+		matrix[rowToPaste][i] = matrix[rowToCopy][i];
+	}
+}
 int getSum(int matrix[][SIZE], int size) {
 	int sum = 0;
 	for (int i = 0; i < size; i++) {
