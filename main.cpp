@@ -5,6 +5,15 @@ using namespace std;
 const int SIZE = 19;
 
 
+void showArray(int matrix[][SIZE], int size) {
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			cout<<setw(4)<<matrix[i][j];
+		}
+		cout<<"\n";
+	}
+}
+
 int getMinimumIndex(int matrix[SIZE], int size) {
 	int currentMinimum = 0;
 	for (int i = 0; i < size; i++) {
