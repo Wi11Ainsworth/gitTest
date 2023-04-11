@@ -5,6 +5,16 @@ using namespace std;
 const int SIZE = 19;
 
 
+int getMinimumIndex(int matrix[SIZE], int size) {
+	int currentMinimum = 0;
+	for (int i = 0; i < size; i++) {
+		if (matrix[i] < matrix[currentMinimum]) {
+			currentMinimum = i;
+		}
+	}
+	return currentMinimum;
+}
+
 void changeArray(int (&matrix)[SIZE][SIZE], int size, int rowToPaste, int rowToCopy) {
 	rowToPaste--;
 	rowToCopy--;
